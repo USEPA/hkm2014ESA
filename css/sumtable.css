@@ -1,0 +1,112 @@
+/*sumtable.css
+created by: Jeff Hollister
+date:       July 2014
+*/
+
+/* #Meyer Reset #/ 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* #Table Style
+==============*/
+
+table {
+  width: 6in;
+  font-size: 20pt;
+}
+/* borders */
+table thead {
+  border-top: 1px solid #1B346C;
+  border-bottom: 1px solid #1B346C;
+}
+
+table td {
+  border-bottom: 1px solid #1B346C;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Header Background and Font colors*/
+table th {
+  background: #1B346C;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  /*height: 1in;*/
+  text-align: center;
+  vertical-align: bottom;
+}
+
+table th + th {
+  text-align: center;
+}
+
+table td + td {
+  color: #1B346C; 
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*table tr {
+  height: 0.75in;
+}*/
+
+/* Row Alternating Color eff3f4*/
+table tr:nth-child(2n+1) {
+  background: #01ABE9;
+  width: 300px;
+}
+
+/* Table Font */
+table tr > td:first-child {
+  font-weight: 600;
+  color: #1B346C;
+}
+

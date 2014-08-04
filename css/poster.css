@@ -1,0 +1,245 @@
+/*poster.css
+created by: Jeff Hollister
+date:       May 2014
+what:       First cut of an experiment to layout a poster with css.  Used in 
+            conjuction with .Rmd, knitr, pandoc, and makefiles to create a LaTeX and
+            Beamer free poster (mainly becuase I suck at LaTeX). So, I also suck at 
+            CSS, but not as bad.  So here is a hack to get the positioing done.
+            I had to use % for horizontal positioning and inches for vertical
+            positions.  I don't know why...
+*/
+
+/*Table of Contents
+# Poster setup
+# Title
+# Content
+# Introduction
+# Methods
+# Results
+# Conclusions
+# More Info
+# Table Style
+# Specific styling rules
+*/
+
+/* #Poster Setup 
+=================*/
+
+/* Sets overall page size in inches and sets up columns */
+@viewport {
+  	width: 80in;
+  	height: 40in;
+	}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+/* This div sets the whole thing on the page */
+div#poster {
+	position:absolute;
+	width: 98.75%;
+	height: 97.5%;
+	top: 1.25%;
+	left: 0.625%;
+	border: thin solid black;
+	background: none;
+	font-family: sans-serif;
+	color: black;
+  font-size: 3em;
+}
+
+/* #Title
+=========*/
+
+/*Positioning*/
+div#title {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.25%;
+  text-align: center;
+  background: none;
+}
+
+div#title h1 {
+	font-size: 4.5em;
+  padding-bottom: 20px;
+}
+
+div#title h2 {
+	font-size: 3.5em;
+  padding-bottom: 20px;
+}
+
+div#title h3 {
+  font-size: 2em;
+  padding-bottom: 20px;
+}
+
+div#title h4 {
+  color: black;
+  font-size: 1.75em;
+  padding-bottom: 20px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* #content
+=========*/
+
+div#content {
+  position:relative;
+  /*margin-left: 10px;
+  margin-right: 10px;
+  
+  margin-bottom: 10px;*/
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: auto;
+  height: auto;
+}
+
+/* #Introduction
+================*/
+
+/*Positioning*/
+div#introduction {
+  position: absolute;
+  text-align: justify;
+  left: 1%;
+  top: 1in;
+  width: 30.667%;
+}
+
+/* #Methods
+===========*/
+
+/*Positioning*/
+div#methods {
+  position: absolute;
+  text-align: justify;
+	left: 1%;
+	width: 30.667%;
+	top: 8in;
+}
+
+/* #Results
+===========*/
+
+/*Positioning*/
+div#results {
+  position: absolute;
+  text-align: justify;
+  left:   34.667%;
+  top: 1in;
+  width:  30.667%;
+}
+
+/* #Conclusions
+===============*/
+
+/*Positioning*/
+div#conclusions {
+  position: absolute;
+  text-align: justify;
+  left: 67.334%;
+  top: 1in;
+  width: 30.667%;
+}
+
+/* #More Info
+=============*/
+
+/*Positioning*/
+div#more {
+  position: absolute;
+  text-align: justify;
+  left: 67.334%;
+  top: 8in;
+  width: 30.667%;
+}
+
+/* #Table Style
+==============*/
+
+/* General Table Positioning */
+table {
+  width: 25%;
+  position: relative;
+}
+/* borders */
+table thead {
+  border-top: 1px solid #4a5b63;
+  border-bottom: 1px solid #4a5b63;
+}
+
+table td {
+  border-bottom: 1px solid #4a5b63;
+}
+
+/* Header Background and Font colors*/
+table th {
+  background: #4a5b63;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Row Alternating Color eff3f4*/
+table tr:nth-child(2n+1) {
+  background: #b6b8ba;
+}
+
+/* Table Font */
+table tr > td:first-child {
+  font-weight: 600;
+  color: #4a5b63;
+}
+
+/* #Specific Styling Rules
+==========================*/
+div#varsel {
+  position: relative;
+  clear: both;
+}
+
+div#table1{
+  position:absolute;
+  left: 0%;
+  top: 0in;
+}
+
+div#table2{
+  position:absolute;
+  left: 30%;
+  top: 0in;
+}
+
+div#table3{
+  position:absolute;
+  left: 60%;
+  top: 0in;
+}
+
+div#table4{
+  position:absolute;
+  left: 0%;
+  top: 9in;
+}
+div#table5{
+  position:absolute;
+  left: 30%;
+  top: 9in;
+}
+div#table6{
+  position:absolute;
+  left: 60%;
+  top: 9in;
+}
+
+
