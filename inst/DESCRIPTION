@@ -1,0 +1,14 @@
+Package: hkm
+Type: Package
+Title: Data and Analysis for Hollister, Kreakie, and Milstead 2014
+Version: 0.0.1
+Date: 2014-04-22
+BugReports: https://www.github.com/USEPA/hkm/issues
+Maintainer: Jeffrey W. Hollister <hollister.jeff@epa.gov>
+License: file LICENSE
+Description: This package contains the raw data and analyses for the paper:
+  "Environmental Determinants of Lake Trophic Status in the Conterminous United 
+  States: A Data Mining Approach" by Hollister, Kreakie, and Milstead."
+Depends:
+    randomForest
+

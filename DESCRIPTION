@@ -1,0 +1,27 @@
+Package: hkm
+Type: Package
+Title: Data and Analysis for Hollister, Kreakie, and Milstead 2014
+Version: 0.0.1
+Date: 2014-04-22
+Author: Jeffrey W. Hollister, Betty J. Kreakie, W. Bryan Milstead
+Maintainer: hollister.jeff@epa.gov <hollister.jeff@epa.gov>
+Description: This package contains the raw data and analyses for the paper:
+    "Environmental Determinants of Lake Trophic Status in the Conterminous
+    United States: A Data Mining Approach" by Hollister, Kreakie, and Milstead.
+    Please note the SystemRequirements.  Needs wkhtmltoimage
+    (http://wkhtmltopdf.org) for all functions to work properly.
+License: file LICENSE
+Depends:
+    randomForest,
+    varSelRF,
+    snowfall,
+    parallel,
+    knitr,
+    xtable,
+    jpeg,
+    ggplot2,
+    grid,
+    e1071,
+    maps,
+    rgdal
+SystemRequirements: wkhtmltoimage
