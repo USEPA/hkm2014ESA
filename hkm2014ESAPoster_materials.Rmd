@@ -139,7 +139,7 @@ col_lu<-data.frame(variables=all_vars,hexcode=sample(all_movies_palette,length(a
 
 ###Model 1: 4 Trophic States ~ All Variables
 
-```{r ALL_TS4, echo=FALSE, eval=FALSE, cache=FALSE}
+```{r ALL_TS4, echo=FALSE, eval=TRUE, cache=TRUE}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 all_ts4<-iterVarSelRF(hkm2014Data[predictors_all],hkm2014Data$TS_CHLA_4,numCore=4,100,
@@ -147,11 +147,11 @@ all_ts4<-iterVarSelRF(hkm2014Data[predictors_all],hkm2014Data$TS_CHLA_4,numCore=
 											vars.drop.num=1,outStr="all_ts4",time=TRUE)
 ```
 
-```{r ALL_TS4_rf,echo=FALSE,eval=F,cache=F}
+```{r ALL_TS4_rf,echo=FALSE,eval=T,cache=T}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 all_ts4_vars<-unique(unlist(all_ts4[1:100]))
-all_ts4_rf_2<-runRandomForest(hkm2014Data[all_ts4_vars],hkm2014Data$TS_CHLA_4, ntree=100,importance=TRUE,proximity=TRUE)
+all_ts4_rf_2<-runRandomForest(hkm2014Data[all_ts4_vars],hkm2014Data$TS_CHLA_4, ntree=10000,importance=TRUE,proximity=TRUE)
 ```
 
 
@@ -183,7 +183,7 @@ Total accuracy for Model 1 is `r round(classAgreement(all_ts4_rf$confusion[,1:4]
 
 ###Model 2: 3 Trophic States ~ All Variables
 
-```{r ALL_TS3, echo=FALSE, eval=FALSE, cache=FALSE}
+```{r ALL_TS3, echo=FALSE, eval=TRUE, cache=TRUE}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 all_ts3<-iterVarSelRF(hkm2014Data[predictors_all],hkm2014Data$TS_CHLA_3,numCore=4,100,
@@ -192,7 +192,7 @@ all_ts3<-iterVarSelRF(hkm2014Data[predictors_all],hkm2014Data$TS_CHLA_3,numCore=
 ```
 
 
-```{r all_TS3_rf,echo=FALSE,eval=F,cache=F}
+```{r all_TS3_rf,echo=FALSE,eval=T,cache=T}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 all_ts3_vars<-unique(unlist(all_ts3[1:100]))
@@ -225,7 +225,7 @@ Total accuracy for Model 2 is `r round(classAgreement(all_ts3_rf$confusion[,1:3]
 
 ###Model 3: 2 Trophic States ~ All Variables
 
-```{r ALL_TS2, echo=FALSE, eval=FALSE, cache=FALSE}
+```{r ALL_TS2, echo=FALSE, eval=TRUE, cache=TRUE}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 all_ts2<-iterVarSelRF(hkm2014Data[predictors_all],hkm2014Data$TS_CHLA_2,numCore=4,100,
@@ -234,7 +234,7 @@ all_ts2<-iterVarSelRF(hkm2014Data[predictors_all],hkm2014Data$TS_CHLA_2,numCore=
 ```
 
 
-```{r all_TS2_rf,echo=FALSE,eval=F,cache=F}
+```{r all_TS2_rf,echo=FALSE,eval=T,cache=T}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 all_ts2_vars<-unique(unlist(all_ts2[1:100]))
@@ -267,7 +267,7 @@ Total accuracy for Model 3 is `r round(classAgreement(all_ts2_rf$confusion[,1:2]
 
 ###Model 4: 4 Trophic States ~ GIS Only Variables
 
-```{r GIS_TS4, echo=FALSE, eval=FALSE, cache=FALSE}
+```{r GIS_TS4, echo=FALSE, eval=TRUE, cache=TRUE}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 gis_ts4<-iterVarSelRF(hkm2014Data[predictors_gis],hkm2014Data$TS_CHLA_4,numCore=4,100,
@@ -275,7 +275,7 @@ gis_ts4<-iterVarSelRF(hkm2014Data[predictors_gis],hkm2014Data$TS_CHLA_4,numCore=
 											vars.drop.num=1,outStr="gis_ts4",time=TRUE)
 ```
 
-```{r GIS_TS4_rf,echo=FALSE,eval=F,cache=F}
+```{r GIS_TS4_rf,echo=FALSE,eval=T,cache=T}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 gis_ts4_vars<-unique(unlist(gis_ts4[1:100]))
@@ -309,7 +309,7 @@ Total accuracy for Model 4 is `r round(classAgreement(gis_ts4_rf$confusion[,1:4]
 
 ###Model 5: 3 Trophic States ~ GIS Only Variables
 
-```{r GIS_TS3, echo=FALSE, eval=FALSE, cache=FALSE}
+```{r GIS_TS3, echo=FALSE, eval=TRUE, cache=TRUE}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 gis_ts3<-iterVarSelRF(hkm2014Data[predictors_gis],hkm2014Data$TS_CHLA_3,numCore=4,100,
@@ -317,7 +317,7 @@ gis_ts3<-iterVarSelRF(hkm2014Data[predictors_gis],hkm2014Data$TS_CHLA_3,numCore=
 											vars.drop.num=1,outStr="gis_ts3",time=TRUE)
 ```
 
-```{r GIS_TS3_rf,echo=FALSE,eval=F,cache=F}
+```{r GIS_TS3_rf,echo=FALSE,eval=TRUE,cache=TRUE}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 gis_ts3_vars<-unique(unlist(gis_ts3[1:100]))
@@ -350,7 +350,7 @@ Total accuracy for Model 5 is `r round(classAgreement(gis_ts3_rf$confusion[,1:3]
 
 ###Model 6: 2 Trophic States ~ GIS Only Variables
 
-```{r GIS_TS2, echo=FALSE, eval=FALSE, cache=FALSE}
+```{r GIS_TS2, echo=FALSE, eval=TRUE, cache=TRUE}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 gis_ts2<-iterVarSelRF(hkm2014Data[predictors_gis],hkm2014Data$TS_CHLA_2,numCore=4,100,
@@ -358,7 +358,7 @@ gis_ts2<-iterVarSelRF(hkm2014Data[predictors_gis],hkm2014Data$TS_CHLA_2,numCore=
 											vars.drop.num=1,outStr="gis_ts2",time=TRUE)
 ```
 
-```{r GIS_TS2_rf,echo=FALSE,eval=F,cache=F}
+```{r GIS_TS2_rf,echo=FALSE,eval=TRUE,cache=TRUE}
 #Included for completeness.  Results already run in another project
 #Those results loaded via lazyLoad in setup chunk
 gis_ts2_vars<-unique(unlist(gis_ts2[1:100]))
