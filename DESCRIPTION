@@ -23,5 +23,6 @@ Depends:
     grid,
     e1071,
     maps,
-    rgdal
+    rgdal,
+    mapproj
 SystemRequirements: wkhtmltoimage
