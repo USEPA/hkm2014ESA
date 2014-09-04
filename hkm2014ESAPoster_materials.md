@@ -31,50 +31,10 @@ We utilize four primary sources of data for this study. These are outlined below
 4. Estimated Cyanobacteria Biovolumes: Cyanobacteria biovolumes is a truer measure of Cyanobacteria dominance than abundance as there is great variability in the size within and between species.  To account for this, Beaulieu *et al.* [-@beaulieu2013nutrients] used literature values to estimate biovolumes for the taxa in the NLA.  They shared this data and we have summed that information on a per-lake basis.  
 
 
-```
-## Error: object 'predictors_all' not found
-```
-
-```
-## Error: object 'predictors_all' not found
-```
-
-```
-## Error: object 'type' not found
-```
-
-```
-## Error: object 'type' not found
-```
-
-```
-## Error: object 'predictors_all' not found
-```
 
 
 ```
-## Error: object 'hkm2014Data' not found
-```
-
-```
-## Error: error in evaluating the argument 'obj' in selecting a method for function 'coordinates': Error in coordinates(lakes_alb) : 
-##   error in evaluating the argument 'obj' in selecting a method for function 'coordinates': Error: object 'lakes_alb' not found
-```
-
-```
-## Error: error in evaluating the argument 'x' in selecting a method for function 'spTransform': Error: object 'lakes_alb_sp' not found
-```
-
-```
-## Error: error in evaluating the argument 'obj' in selecting a method for function 'coordinates': Error: object 'lakes_dd' not found
-```
-
-```
-## Error: object 'lakes_dd' not found
-```
-
-```
-## Error: object 'lakes_dd' not found
+## Saving 18 x 7 in image
 ```
 **Predicting Trophic State with Random Forests**
 
@@ -110,6 +70,43 @@ Using a combination of the `varSelRF` and `randomForest` we ran models for six c
 ###Model 1: 4 Trophic States ~ All Variables
 
 
+```
+## R Version:  R version 3.1.0 (2014-04-10)
+```
+
+```
+## snowfall 1.84-6 initialized (using snow 0.3-13): parallel execution on 4 CPUs.
+```
+
+```
+## Library varSelRF loaded.
+```
+
+```
+## Library varSelRF loaded in cluster.
+```
+
+```
+## 
+## 
+## |   |Variable | Percent|
+## |:--|:--------|-------:|
+## |2  |NPratio  |    1.00|
+## |3  |NTL      |    1.00|
+## |4  |PTL      |    1.00|
+## |5  |TOC      |    1.00|
+## |6  |TURB     |    1.00|
+## |7  |WSA_ECO9 |    1.00|
+## |1  |K        |    0.99|
+## |8  |ORGION   |    0.33|
+## |9  |DOC      |    0.22|
+## |10 |DEPTHMAX |    0.11|
+```
+
+```
+## 
+## Stopping cluster
+```
 
 
 
@@ -120,8 +117,8 @@ Using a combination of the `varSelRF` and `randomForest` we ran models for six c
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:all_ts4_color
 ```
 
 ```
@@ -129,8 +126,8 @@ Using a combination of the `varSelRF` and `randomForest` we ran models for six c
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:all_ts4_color
 ```
 \newpage
 ![Trophic State 4 - All Variables - Importance Acc](figure/all_ts4_importAcc.jpg)
@@ -142,13 +139,53 @@ Using a combination of the `varSelRF` and `randomForest` we ran models for six c
 ![Trophic State 4 - All Variables - Confusion](figure/all_ts4_confusion.jpg)
 \newpage
 
-Total accuracy for Model 1 is 0.667% and the Cohen's Kappa is 0.546.
+Total accuracy for Model 1 is 0.669% and the Cohen's Kappa is 0.549.
 
 
 
 ###Model 2: 3 Trophic States ~ All Variables
 
 
+```
+## snowfall 1.84-6 initialized (using snow 0.3-13): parallel execution on 4 CPUs.
+```
+
+```
+## Library varSelRF loaded.
+```
+
+```
+## Library varSelRF loaded in cluster.
+```
+
+```
+## 
+## 
+## |   |Variable       | Percent|
+## |:--|:--------------|-------:|
+## |1  |DEPTHMAX       |    1.00|
+## |2  |DOC            |    1.00|
+## |3  |K              |    1.00|
+## |5  |NTL            |    1.00|
+## |6  |ORGION         |    1.00|
+## |7  |PTL            |    1.00|
+## |8  |TOC            |    1.00|
+## |9  |TURB           |    1.00|
+## |10 |WSA_ECO9       |    1.00|
+## |4  |NPratio        |    0.88|
+## |11 |AlbersX        |    0.58|
+## |12 |CropsPer_3000m |    0.36|
+## |13 |ELEV_PT        |    0.23|
+## |14 |NH4            |    0.06|
+## |16 |AlbersY        |    0.04|
+## |17 |CL             |    0.03|
+## |15 |PH_FIELD       |    0.02|
+```
+
+```
+## 
+## Stopping cluster
+```
 
 
 
@@ -159,8 +196,8 @@ Total accuracy for Model 1 is 0.667% and the Cohen's Kappa is 0.546.
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:all_ts3_color
 ```
 
 ```
@@ -168,8 +205,8 @@ Total accuracy for Model 1 is 0.667% and the Cohen's Kappa is 0.546.
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:all_ts3_color
 ```
 \newpage
 ![Trophic State 3 - All Variables - Importance Acc](figure/all_ts3_importAcc.jpg)
@@ -181,11 +218,49 @@ Total accuracy for Model 1 is 0.667% and the Cohen's Kappa is 0.546.
 ![Trophic State 3 - All Variables - Confusion](figure/all_ts3_confusion.jpg)
 \newpage
 
-Total accuracy for Model 2 is 0.799% and the Cohen's Kappa is 0.618.
+Total accuracy for Model 2 is 0.796% and the Cohen's Kappa is 0.613.
 
 ###Model 3: 2 Trophic States ~ All Variables
 
 
+```
+## snowfall 1.84-6 initialized (using snow 0.3-13): parallel execution on 4 CPUs.
+```
+
+```
+## Library varSelRF loaded.
+```
+
+```
+## Library varSelRF loaded in cluster.
+```
+
+```
+## 
+## 
+## |   |Variable | Percent|
+## |:--|:--------|-------:|
+## |2  |K        |    1.00|
+## |3  |NPratio  |    1.00|
+## |4  |NTL      |    1.00|
+## |6  |PTL      |    1.00|
+## |7  |TOC      |    1.00|
+## |8  |TURB     |    1.00|
+## |9  |WSA_ECO9 |    1.00|
+## |5  |ORGION   |    0.98|
+## |11 |DEPTHMAX |    0.91|
+## |10 |DDs45    |    0.89|
+## |1  |ELEV_PT  |    0.85|
+## |12 |DOC      |    0.42|
+## |13 |AlbersX  |    0.11|
+## |14 |AlbersY  |    0.03|
+## |15 |Na       |    0.03|
+```
+
+```
+## 
+## Stopping cluster
+```
 
 
 
@@ -196,8 +271,8 @@ Total accuracy for Model 2 is 0.799% and the Cohen's Kappa is 0.618.
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:all_ts2_color
 ```
 
 ```
@@ -205,8 +280,8 @@ Total accuracy for Model 2 is 0.799% and the Cohen's Kappa is 0.618.
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:all_ts2_color
 ```
 \newpage
 ![Trophic State 2 - All Variables - Importance Acc](figure/all_ts2_importAcc.jpg)
@@ -218,11 +293,42 @@ Total accuracy for Model 2 is 0.799% and the Cohen's Kappa is 0.618.
 ![Trophic State 2 - All Variables - Confusion](figure/all_ts2_confusion.jpg)
 \newpage
 
-Total accuracy for Model 3 is 0.87% and the Cohen's Kappa is 0.741.
+Total accuracy for Model 3 is 0.867% and the Cohen's Kappa is 0.734.
 
 ###Model 4: 4 Trophic States ~ GIS Only Variables
 
 
+```
+## snowfall 1.84-6 initialized (using snow 0.3-13): parallel execution on 4 CPUs.
+```
+
+```
+## Library varSelRF loaded.
+```
+
+```
+## Library varSelRF loaded in cluster.
+```
+
+```
+## 
+## 
+## |   |Variable           | Percent|
+## |:--|:------------------|-------:|
+## |1  |AlbersX            |    1.00|
+## |2  |CropsPer_3000m     |    1.00|
+## |3  |EvergreenPer_3000m |    1.00|
+## |4  |MeanDepthCorrect   |    1.00|
+## |5  |WSA_ECO9           |    1.00|
+## |6  |AlbersY            |    0.30|
+## |8  |ELEV_PT            |    0.05|
+## |7  |MaxDepthCorrect    |    0.01|
+```
+
+```
+## 
+## Stopping cluster
+```
 
 
 
@@ -232,8 +338,8 @@ Total accuracy for Model 3 is 0.87% and the Cohen's Kappa is 0.741.
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:gis_ts4_color
 ```
 
 ```
@@ -241,8 +347,8 @@ Total accuracy for Model 3 is 0.87% and the Cohen's Kappa is 0.741.
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:gis_ts4_color
 ```
 \newpage
 ![Trophic State 4 - All Variables - Importance Acc](figure/gis_ts4_importAcc.jpg)
@@ -254,11 +360,47 @@ Total accuracy for Model 3 is 0.87% and the Cohen's Kappa is 0.741.
 ![Trophic State 4 - GIS Variables - Confusion](figure/gis_ts4_confusion.jpg)
 \newpage
 
-Total accuracy for Model 4 is 0.482% and the Cohen's Kappa is 0.292.
+Total accuracy for Model 4 is 0.489% and the Cohen's Kappa is 0.302.
 
 ###Model 5: 3 Trophic States ~ GIS Only Variables
 
 
+```
+## snowfall 1.84-6 initialized (using snow 0.3-13): parallel execution on 4 CPUs.
+```
+
+```
+## Library varSelRF loaded.
+```
+
+```
+## Library varSelRF loaded in cluster.
+```
+
+```
+## 
+## 
+## |   |Variable           | Percent|
+## |:--|:------------------|-------:|
+## |1  |AlbersX            |    1.00|
+## |2  |AlbersY            |    1.00|
+## |3  |CropsPer_3000m     |    1.00|
+## |7  |EvergreenPer_3000m |    1.00|
+## |8  |MaxDepthCorrect    |    1.00|
+## |9  |MeanDepthCorrect   |    1.00|
+## |13 |WSA_ECO9           |    1.00|
+## |6  |ELEV_PT            |    0.97|
+## |4  |DeciduousPer_3000m |    0.94|
+## |10 |ShrubPer_3000m     |    0.32|
+## |12 |WoodyWetPer_3000m  |    0.18|
+## |5  |DevOpenPer_3000m   |    0.13|
+## |11 |VolumeCorrect      |    0.11|
+```
+
+```
+## 
+## Stopping cluster
+```
 
 
 
@@ -268,8 +410,8 @@ Total accuracy for Model 4 is 0.482% and the Cohen's Kappa is 0.292.
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:gis_ts3_color
 ```
 
 ```
@@ -277,8 +419,8 @@ Total accuracy for Model 4 is 0.482% and the Cohen's Kappa is 0.292.
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:gis_ts3_color
 ```
 \newpage
 ![Trophic State 3 - All Variables - Importance Acc](figure/gis_ts3_importAcc.jpg)
@@ -290,11 +432,47 @@ Total accuracy for Model 4 is 0.482% and the Cohen's Kappa is 0.292.
 ![Trophic State 3 - GIS Variables - Confusion](figure/gis_ts3_confusion.jpg)
 \newpage
 
-Total accuracy for Model 5 is 0.673% and the Cohen's Kappa is 0.343.
+Total accuracy for Model 5 is 0.676% and the Cohen's Kappa is 0.347.
 
 ###Model 6: 2 Trophic States ~ GIS Only Variables
 
 
+```
+## snowfall 1.84-6 initialized (using snow 0.3-13): parallel execution on 4 CPUs.
+```
+
+```
+## Library varSelRF loaded.
+```
+
+```
+## Library varSelRF loaded in cluster.
+```
+
+```
+## 
+## 
+## |   |Variable           | Percent|
+## |:--|:------------------|-------:|
+## |1  |AlbersX            |    1.00|
+## |2  |AlbersY            |    1.00|
+## |4  |CropsPer_3000m     |    1.00|
+## |5  |DDs45              |    1.00|
+## |8  |ELEV_PT            |    1.00|
+## |9  |EvergreenPer_3000m |    1.00|
+## |11 |MeanDepthCorrect   |    1.00|
+## |12 |WSA_ECO9           |    1.00|
+## |10 |MaxDepthCorrect    |    0.98|
+## |6  |DeciduousPer_3000m |    0.91|
+## |7  |DevOpenPer_3000m   |    0.71|
+## |3  |BASINAREA          |    0.33|
+## |13 |VolumeCorrect      |    0.01|
+```
+
+```
+## 
+## Stopping cluster
+```
 
 
 
@@ -304,8 +482,8 @@ Total accuracy for Model 5 is 0.673% and the Cohen's Kappa is 0.343.
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:gis_ts2_color
 ```
 
 ```
@@ -313,8 +491,8 @@ Total accuracy for Model 5 is 0.673% and the Cohen's Kappa is 0.343.
 ```
 
 ```
-## Warning: font family not found in Windows font database
-## Warning: font family not found in Windows font database
+## Error: Aesthetics must either be length one, or the same length as the
+## dataProblems:gis_ts2_color
 ```
 \newpage
 ![Trophic State 2 - All Variables - Importance Acc](figure/gis_ts2_importAcc.jpg)
@@ -326,35 +504,31 @@ Total accuracy for Model 5 is 0.673% and the Cohen's Kappa is 0.343.
 ![Trophic State 2 - GIS Variables - Confusion](figure/gis_ts2_confusion.jpg)
 \newpage
 
-Total accuracy for Model 6 0.758% and the Cohen's Kappa is 0.517.
+Total accuracy for Model 6 0.757% and the Cohen's Kappa is 0.515.
 
 ###Associating Trophic State and Cyanobacteria
 
 
 ```
-## Error: object 'hkm2014Data' not found
+## Saving 9 x 8 in image
 ```
 ![Trophic State 4 - CDF](figure/ts4_cdf.jpg)
 \newpage
 
 ```
-## Error: object 'hkm2014Data' not found
+## Saving 9 x 8 in image
 ```
 ![Trophic State 3 - CDF](figure/ts3_cdf.jpg)
 \newpage
 
 ```
-## Error: object 'hkm2014Data' not found
+## Saving 9 x 8 in image
 ```
 ![Trophic State 2 - CDF](figure/ts2_cdf.jpg)
 \newpage
 
 ```
-## Error: object 'hkm2014Data' not found
-```
-
-```
-## Error: object 'scp_df' not found
+## Saving 9 x 8 in image
 ```
 ![Chla/BioV Scatterplot](figure/scatterplot.jpg)
 
