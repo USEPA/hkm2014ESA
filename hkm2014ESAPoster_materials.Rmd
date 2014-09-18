@@ -6,11 +6,11 @@ library("wesanderson")
 library("hkm")
 data(hkm2014Data_nobiov)
 #Checks for existing cache (from another project)
-#if(file.exists("cache")){
-#  for(i in gsub(".rdb","",list.files("cache",".rdb",full.names=T))){
-#    lazyLoad(i)
-#  }
-#}
+if(file.exists("cache")){
+  for(i in gsub(".rdb","",list.files("cache",".rdb",full.names=T))){
+    lazyLoad(i)
+  }
+}
 ```
 
 
