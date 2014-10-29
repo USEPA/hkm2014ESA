@@ -4,6 +4,7 @@ This is the source for [ESA PS1-12](http://eco.confex.com/eco/2014/webprogram/Pa
 
 - figshare cite: Hollister, Jeffrey; Milstead, William B; Kreakie, Betty J. (2014): Expanding models of lake trophic state to predict cyanobacteria in lakes. figshare. 
 http://dx.doi.org/10.6084/m9.figshare.946321
+- poster: Hollister, Jeffrey; Milstead, William B; Kreakie, Betty J. (2014): Expanding models of lake trophic state to predict cyanobacteria in lakes: A Data Mining Approach. http://f1000.com/posters/browse/summary/1096851
 
 #Recreate Poster
 
